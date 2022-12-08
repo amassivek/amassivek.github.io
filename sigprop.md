@@ -38,7 +38,7 @@ Constraints prohibit parallelization of computations during learning and bound m
 - Parameters are updated in reverse order of the forward pass (Time, Synchronous)
 
 <picture>
- <img alt="motivation" width="200" src="./sigprop/Slide2.PNG">
+ <img alt="motivation" src="./sigprop/Slide2.PNG">
 </picture>
 
 ## Spatial Credit Assignment
@@ -126,6 +126,7 @@ This method propagates the learning signal forward in time. So, the learning sig
 </td>	
 </tr>
 </table>
+
 
 # Solution - Signal Propagation (sigprop, or SG)
 
