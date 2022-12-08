@@ -3,9 +3,12 @@ title: "Signal Propagation - A Framework for Learning and Inference in a Forward
 permalink: /sigprop
 ---
 
-# Learning and Inference in a Forward Pass - The Signal Propagation Framework
-
 On this page, I present the Signal Propagation framework for inference and learning in a forward pass. This is a framework for using only forward passes to learn any kind of data and on any kind of network. I demonstrate it works well for discrete networks, continuous networks, and spiking networks, all without modification to the network architecture. In other words, the network used for inference is the same as the network used for learning. As a result, Signal Propagation is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation.
+
+Table of Contents
++ [Motivation](#motivation)
++ [Solution](#solution)
++ [Spiking Networks](#spiking-networks)
 
 ## Background
 Learning is the active ingredient to make artificial neural networks work. Backpropagation is recognized as the best performing learning algorithm, powering the success of artificial neural networks. However, it is a highly constrained learning algorithm. And, it is these constraints that are seen as necessary for its high performance. It is well accepted that reducing even some of these constraints lowers performance. However, due to these same constraints, backpropagation has problems with efficiency and compatibility. It is not efficient with time, memory, and energy. It has low compatibility with biological models of learning, neuromorphic chips, and edge devices. So, one may think to address this problem by reducing different subsets of constraints in an attempt to increase efficiency and compatibility without heavily lowering performance.
@@ -127,8 +130,9 @@ This method propagates the learning signal forward in time. So, the learning sig
 </tr>
 </table>
 
+# Solution
 
-# Solution - Signal Propagation (sigprop, or SG)
+## Signal Propagation, sigprop, or SG
 
 Free constraints for learning to take place
 - only a forward pass, no backward pass
