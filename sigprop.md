@@ -293,10 +293,15 @@ Contact me or submit a pull request to add a paragraph and slide on your work. T
 ## Reading Material
 
 Signal Propagation: A Framework for Learning and Inference In a Forward Pass\
-https://arxiv.org/abs/2204.01723
+https://arxiv.org/abs/2204.01723 (2022)
 
 Forward Forward Algorithm\
-https://www.cs.toronto.edu/~hinton/FFA13.pdf
+https://www.cs.toronto.edu/~hinton/FFA13.pdf (2022)
+
+Error Forward-Propagation: Reusing Feedforward Connections to Propagate Errors in Deep Learning
+https://arxiv.org/abs/1808.03357 (2018)
+
+### Other Material
 
 A well written guide on spatial and temporal credit assignment. I used it to help write this post.\
 Training Spiking Neural Networks using lessons from deep learning\
@@ -307,3 +312,5 @@ https://arxiv.org/abs/2109.12894
 \[1] Image of 7 from MNIST dataset, http://yann.lecun.com/exdb/mnist/ \
 \[2] Images of dogs, horses, and frogs from CIFAR Dataset, https://www.cs.toronto.edu/~kriz/cifar.html
 
+
+With Thanks to: Alexandra Marmarinos for her editing work.
