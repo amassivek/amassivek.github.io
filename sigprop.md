@@ -176,7 +176,7 @@ Why FMD vs BPT? Above, I discussed the learning constraints under backpropagatio
 ## Learning in a Forward Pass
 
 ### The Signal Propagation Framework (SP)
-I present here, the Framework for Learning and Inference in a Forward Pass, called Signal Propagation. It is a satisfyingly straightforward solution to temporal and spatial credit assignment. SP is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation. It also has better efficiency and compatibility than backpropagation. SP provides a reasonable performance tradeoff for efficiency and compatibility; significantly better than previous approaches. (In general, backpropagation is the best performing algorithm.)
+I present here, the Framework for Learning and Inference in a Forward Pass, called Signal Propagation. It is a satisfyingly straightforward solution to temporal and spatial credit assignment. SP is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation. It also has better efficiency and compatibility than backpropagation. SP provides a reasonable performance tradeoff for efficiency and compatibility. This is particularly appealing, considering it's compatibility for target based deep learning (e.g. supervised and reinforcement) with new hardware and long-standing biological models, whereas previous works do not. (In general, backpropagation is the best performing algorithm.)
 
 SP is free of constraints for learning to take place, with:
 - only a forward pass, no backward pass
@@ -287,7 +287,7 @@ Forward Forward Algorithm\
 https://www.cs.toronto.edu/~hinton/FFA13.pdf
 
 ### Add your work
-Contact me or submit a pull request to add a paragraph and slide on your work.
+Contact me or submit a pull request to add a paragraph and slide on your work. The content is at your discretion. I may provide minor edits (e.g. grammar and positioning).
 
 
 ## Reading Material
