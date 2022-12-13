@@ -176,7 +176,7 @@ Why FMD vs BPT? Above, I discussed the learning constraints under backpropagatio
 ## Learning in a Forward Pass
 
 ### The Signal Propagation Framework (SP)
-I present here, the Framework for Learning and Inference in a Forward Pass, called Signal Propagation. SP proves a straightforward solution to  SP is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation. It also has better efficiency and compatibility than backpropagation. SP provides a reasonable performance tradeoff for efficiency and compatibility; significantly better than previous approaches. (In general, backpropagation is the best performing algorithm.)
+I present here, the Framework for Learning and Inference in a Forward Pass, called Signal Propagation. It is a satisfyingly straightforward solution to temporal and spatial credit assignment. SP is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation. It also has better efficiency and compatibility than backpropagation. SP provides a reasonable performance tradeoff for efficiency and compatibility; significantly better than previous approaches. (In general, backpropagation is the best performing algorithm.)
 
 SP is free of constraints for learning to take place, with:
 - only a forward pass, no backward pass
