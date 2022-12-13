@@ -298,7 +298,7 @@ https://arxiv.org/abs/2204.01723 (2022)
 Forward Forward Algorithm\
 https://www.cs.toronto.edu/~hinton/FFA13.pdf (2022)
 
-Error Forward-Propagation: Reusing Feedforward Connections to Propagate Errors in Deep Learning
+Error Forward-Propagation: Reusing Feedforward Connections to Propagate Errors in Deep Learning\
 https://arxiv.org/abs/1808.03357 (2018)
 
 ### Other Material
