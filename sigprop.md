@@ -5,7 +5,9 @@ permalink: /sigprop
 
 This page is a concise tutorial for learning in a forward pass. By the end of the tutorial, you will understand the concept, and know how to apply this form of learning in your work. The tutorial provides explanations for beginners, and detailed steps for experts. Use the table of contents to go where you want. If you have a work on forward learning, [add your work](#add-your-work) to this page.
 
-On this page, I present the framework for inference and learning in a forward pass, called the Signal Propagation framework. This is a framework for using only forward passes to learn any kind of data and on any kind of network. I demonstrate it works well for discrete networks, continuous networks, and spiking networks, all without modification to the network architecture. In other words, the network used for inference is the same as the network used for learning. In contrast, backpropagation and previous works have additional structure and algorithm elements for the training network than for the inference network, which are referred to as learning constraints. As a result, Signal Propagation is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation. It also has better efficiency and compatibility than backpropagation. This framework is introduced in [https://arxiv.org/abs/2204.01723](https://arxiv.org/abs/2204.01723) .
+On this page, I present the framework for inference and learning in a forward pass, called the Signal Propagation framework. This is a framework for using only forward passes to learn any kind of data and on any kind of network. I demonstrate it works well for discrete networks, continuous networks, and spiking networks, all without modification to the network architecture. In other words, the network used for inference is the same as the network used for learning. In contrast, backpropagation and previous works have additional structure and algorithm elements for the training network than for the inference network, which are referred to as learning constraints. 
+
+Signal Propagation is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation. It also has better efficiency and compatibility than backpropagation. This framework is introduced in https://arxiv.org/abs/2204.01723 (2022) by Adam Kohan, Ed Rietman, and Hava Siegelmann. The origin of forward learning is in our work https://arxiv.org/abs/1808.03357 (2018).
 
 Table of Contents
 + [Introduction](#introduction)
@@ -256,9 +258,9 @@ Below, we will go step by step, layer by layer, doing learning and inference (i.
 
 Spiking neural networks are similar to biological neural networks. They are used in models of learning in the brain. They are also used for neuromorphic chips. There are two problems for learning in spiking neural networks. First, the learning constraints under backpropagation are difficult to reconcile with learning in the brain, and hinders efficient implementations of learning algorithms on hardware (discussed above). Second, training spiking networks results in the dead neuron problem (see below).
 
-The neurons in these networks respond to inputs by either activating (spiking) to convey information to another neuron or by doing nothing (top left image). Commonly, these networks have a problem where neurons never activate, which means they never spike (bottom left image). Thereby, regardless of the input, the neurons response is to always do nothing. This is called the dead neuron problem.
+A reference figure is provided below. The neurons in these networks respond to inputs by either activating (spiking) to convey information to another neuron or by doing nothing (top-left figure). Commonly, these networks have a problem where neurons never activate, which means they never spike (bottom-left figure). Thereby, regardless of the input, the neurons response is to always do nothing. This is called the dead neuron problem.
 
-The most popular approach to resolve this problem uses a surrogate function to replace the spiking behavior of the neurons. The network uses the surrogate only during learning, when the learning signal is sent to the neurons. The surrogate function provides a value for the neuron even when it does not spike (top right image). So, the neuron learns even when it does not spike to convey information to another neuron (bottom right image). This helps stop the neuron from dying. However, surrogates are difficult to implement for learning in hardware, such as neuromorphic chips. Furthermore, surrogates do not fit models of learning in the brain. 
+The most popular approach to resolve this problem uses a surrogate function to replace the spiking behavior of the neurons. The network uses the surrogate only during learning, when the learning signal is sent to the neurons. The surrogate function (blue) provides a value for the neuron even when it does not spike (top-right figure). So, the neuron learns even when it does not spike to convey information to another neuron (bottom-right figure). This helps stop the neuron from dying. However, surrogates are difficult to implement for learning in hardware, such as neuromorphic chips. Furthermore, surrogates do not fit models of learning in the brain. 
 
 Signal Propagation provides two solutions that are compatible with models of learning in the brain and in hardware.
 
@@ -267,7 +269,9 @@ Signal Propagation provides two solutions that are compatible with models of lea
 </picture>	
 
 
-Here is a visualization of the learning signal (colored in red) going through a spiking neuron. Backpropagation, with the dead neuron problem, is on the left. Backpropagation, with a surrogate function, is second. The other images on the right show the two solutions Signal Propagation (SP) provides. First, SP can use a surrogate as well, but the learning signal does not go through the spiking equation (shown as S). As a result, SP is more compatible with learning in the brain, such as in a multi compartment model of a biological neuron. Second, SP can learn using only the voltage or membrane potential. This requires no surrogate or change to the neuron. Thereby, SP provides compatibility with learning in hardware. 
+Below is a visualization of the learning signal (colored in red) going through a spiking neuron (shown as S), past the voltage or membrane potential (U), to update the weights (W). Backpropagation, with the dead neuron problem, is on the left. Backpropagation, with a surrogate function (f), is second from the left. The learning signal for backpropagation is global (L_G) and comes from the last layer of the network; the dotted boxes are upper neurons/layers. 
+
+The other images on the right show the two solutions Signal Propagation (SP) provides. First, SP can use a surrogate as well, but the learning signal does not go through the spiking equation (S). Instead, the learning signal is before the spiking equation (S), directly attached to the surrogate function (f). As a result, SP is more compatible with learning in the brain, such as in a multi compartment model of a biological neuron. Second, SP can learn using only the voltage or membrane potential (U). In this case, the learning signal is directly attached to U. This requires no surrogate or change to the neuron. Thereby, SP provides compatibility with learning in hardware.
 <picture>
  <img alt="temporal-credit-assignment" src="./sigprop/Slide31.PNG">
 </picture>	
@@ -277,7 +281,7 @@ Here is a visualization of the learning signal (colored in red) going through a 
 
 ### Forward Forward Algorithm
 
-The forward forward algorithm is an implementation of the signal propagation framework for learning and inference in a forward pass (figure below). Under signal propagation, S is the transform of the context c, which for supervised learning is the target. In forward forward, S is a concatenation of the target with the input x, as shown in the figure below.
+The forward forward algorithm is an implementation of the signal propagation framework for learning and inference in a forward pass (figure below). Under signal propagation, S is the transform of the context c, which for supervised learning is the target. In forward forward, S is a concatenation of the target c with the input x, as shown in the figure below.
 
 <picture>
  <img alt="temporal-credit-assignment" src="./sigprop/Slide37.PNG">
