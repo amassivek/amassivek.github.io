@@ -3,15 +3,13 @@ title: "The Framework for Learning and Inference in a Forward Pass - Signal Prop
 permalink: /sigprop
 ---
 
-Learning and inference unified at last into a continuous, asynchronous, and parallel process; Free constraints on efficiency, compatibility, and performance by learning in a forward pass
-
-Learning and inference in a forward pass on a three layer network. Inference and learning take place concurrently. Learning reuses the same forward path as inference. Taken together, these features of signal propagation unify learning and inference as a continuous, asynchronous, and parallel process - freeing constraints on learning. This is a distinct departure from previous perspectives on learning, especially in the supervised setting and under backpropagation.
-
 In this post, I present the framework for inference and learning in a forward pass, called the Signal Propagation framework. This is a framework for using only forward passes to learn any kind of data and on any kind of network. I demonstrate it works well for discrete networks, continuous networks, and spiking networks, all without modification to the network architecture. In other words, the version of network used for inference is the same as the version used for learning. In contrast, backpropagation and previous works have additional structure and algorithm elements for the training version of the network than for the inference version of the network, which are referred to as learning constraints.
 
-Signal Propagation is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation. It also has better efficiency and compatibility than backpropagation. This framework is introduced in https://arxiv.org/abs/2204.01723 (2022) by Adam Kohan, Ed Rietman, and Hava Siegelmann. The origin of forward learning is in our work https://arxiv.org/abs/1808.03357 (2018).
+Signal Propagation is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation. It also has better efficiency and compatibility than backpropagation. This framework is introduced in https://arxiv.org/abs/2204.01723 (2022) by Adam Kohan, Ed Rietman, and Hava Siegelmann. Hava Siegelmann and Ed Rietman are my advisors. The origin of forward learning is in our work https://arxiv.org/abs/1808.03357 (2018).
 
 This page is a concise tutorial for learning in a forward pass. By the end of the tutorial, you will understand the concept, and know how to apply this form of learning in your work. The tutorial provides explanations for beginners, and detailed steps for experts. Use the table of contents to go where you want. If you have a work on forward learning, [add your work](#add-your-work) to this page.
+
+(Link to article)
 
 Table of Contents
 1. [Introduction](#1-introduction)\
@@ -132,12 +130,12 @@ Layer by layer, bring the target and its respective input closer together, but f
 ### 3.2. The Steps to Learn
 Below is the total picture for an example three layer network. Each layer has its own loss function, which is used to update weights in the network. So, SP executes the loss function and updates the weights as soon as the target and label reach a layer. Since SP feeds the target and input together (alternating), layer/neuron weights are updated immediately. For spatial credit assignment, SP updates weights without waiting for the input to reach the last layer from the first layer. For temporal credit assignment, SP provides a learning signal for (each time step) each of the multiple connected inputs (e.g. images in a video), without waiting for the last input to be fed into the network.
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide19.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide20.PNG">
 </picture>
 This is a three layer network. The forward pass for learning and inference will proceed in three steps. Each layer has its own loss; a total of three losses. The inputs are x, and the targets are c, both fed in through the front of the network.
 
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide19.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide21.PNG">
 </picture>
 The overall algorithm for learning and inference in a forward pass. The inference and learning phases run in parallel, such that each layer's weights are updated immediately. Notes: For the network shown (left), N = 3, the number of layers. The biases (b and d) are left out for clarity. There are many choices for a loss L (e.g. gradient, Hebbian) and optimizer (e.g. SGD, Momentum, ADAM). The output(), y, is detailed in step 4 below.
 
@@ -145,29 +143,29 @@ Below, we will go step by step, layer by layer, doing learning and inference (i.
 
 #### Step 1) Layer 1
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide20.PNG">
-</picture>
-<picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide21.PNG">
-</picture>	
-<picture>
  <img alt="temporal-credit-assignment" src="./sigprop/Slide22.PNG">
-</picture>	
-
-#### Step 2) Layer 2
+</picture>
 <picture>
  <img alt="temporal-credit-assignment" src="./sigprop/Slide23.PNG">
 </picture>	
 <picture>
  <img alt="temporal-credit-assignment" src="./sigprop/Slide24.PNG">
 </picture>	
+
+#### Step 2) Layer 2
 <picture>
  <img alt="temporal-credit-assignment" src="./sigprop/Slide25.PNG">
+</picture>	
+<picture>
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide26.PNG">
+</picture>	
+<picture>
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide27.PNG">
 </picture>	
 
 #### Step 3) Layer 3
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide26.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide28.PNG">
 </picture>	
 
 #### Step 4) Prediction
@@ -178,16 +176,16 @@ The second option is an adaptive version of the first option. It is adaptive sin
 The third option: the classical and intuitive choice is to train a prediction output layer. This option is also more straightforward for regression and generative tasks. For example, a classification layer, which has has one output per class. So, layer 3 would be a classification layer. Note, that during inference t_3 is not longer used. In addition, notice that t_3_i is equivalent to having a classification layer. To see this, simply concatenate t_3_i together to form the weight matrix of a classification (prediction) layer that is taken with h_3 (e.g. h_3_dog, h_3_horse, …). This means that  this third option is a special case of the first option, and can be a special case of the second option.
 
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide27.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide29.PNG">
 </picture>	
 
 ### 3.3. Overview of Complete Procedure
 
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide28.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide30.PNG">
 </picture>	
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide29.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide31.PNG">
 </picture>	
 
 
@@ -202,14 +200,14 @@ The most popular approach to resolve this problem uses a surrogate function to r
 Signal Propagation provides two solutions that are compatible with models of learning in the brain and in hardware.
 
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide30.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide32.PNG">
 </picture>	
 
 Below is a visualization of the learning signal (colored in red) going through a spiking neuron (shown as S), past the voltage or membrane potential (U), to update the weights (W). Backpropagation, with the dead neuron problem, is on the left. Backpropagation, with a surrogate function (f), is second from the left. The learning signal for backpropagation is global (L_G) and comes from the last layer of the network; the dotted boxes are upper neurons/layers.
 
 The other images on the right show the two solutions Signal Propagation (SP) provides. First, SP can use a surrogate as well, but the learning signal does not go through the spiking equation (S). Instead, the learning signal is before the spiking equation (S), directly attached to the surrogate function (f). As a result, SP is more compatible with learning in the brain, such as in a multi compartment model of a biological neuron. Second, SP can learn using only the voltage or membrane potential (U). In this case, the learning signal is directly attached to U. This requires no surrogate or change to the neuron. Thereby, SP provides compatibility with learning in hardware.
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide31.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide33.PNG">
 </picture>	
 
 
@@ -220,14 +218,14 @@ The other images on the right show the two solutions Signal Propagation (SP) pro
 The forward forward algorithm is an implementation of the signal propagation framework for learning and inference in a forward pass (figure below). Under signal propagation, S is the transform of the context c, which for supervised learning is the target. In forward forward, S is a concatenation of the target c with the input x, as shown in the figure below.
 
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide37.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide38.PNG">
 </picture>	
 
 Forward Forward Algorithm\
 https://www.cs.toronto.edu/~hinton/FFA13.pdf
 
 ### 4.i. Add your work
-Contact me or submit a pull request to add a paragraph and slide on your work. The content is at your discretion. I may provide minor edits (e.g. grammar and positioning).
+Contact me or [submit a pull request](https://github.com/amassivek/amassivek.github.io) to add a paragraph and slide on your work. The content is at your discretion. I may provide minor edits (e.g. grammar and positioning).
 
 
 ## 5. Reading Material
@@ -248,7 +246,7 @@ Training Spiking Neural Networks using lessons from deep learning\
 https://arxiv.org/abs/2109.12894
 
 
-With Thanks to: Alexandra Marmarinos for her editing work and guidance.
+With Thanks to: Alexandra Marmarinos for her editing work and guidance. (Add additional editors).
 
 
 ## Citations
