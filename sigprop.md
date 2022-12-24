@@ -23,9 +23,9 @@ Table of Contents
   3.3. [Overview of Complete Procedure](#33-overview-of-complete-procedure)\
   3.4. [Spiking Networks](#34-spiking-networks)
 4. [Works on Forward Learning](#4-works-on-forward-learning)\
-  4.i. [Add Your Work](#4i-add-your-work)
+  4.i. [Add Your Work](#4i-add-your-work)\
   4.1. [Error Forward Propagation (2018)](#41-error-forward-propagation-2018)\
-  4.2. [Forward Forward (2022)](#42-forward-forward-2022)\
+  4.2. [Forward Forward (2022)](#42-forward-forward-2022)
 5. [Reading Material](#5-reading-material)
 6. [Appendix: Reading on Credit Assignment](#6-appendix-reading-on-credit-assignment)\
   6.1. [Spatial Credit Assignment](#61-spatial-credit-assignment)\
