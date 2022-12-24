@@ -7,7 +7,7 @@ In this post, I present the framework for inference and learning in a forward pa
 
 Signal Propagation is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation. It also has better efficiency and compatibility than backpropagation. This framework is introduced in https://arxiv.org/abs/2204.01723 (2022) by Adam Kohan, Ed Rietman, and Hava Siegelmann. Hava Siegelmann and Ed Rietman are my advisors. The origin of forward learning is in our work https://arxiv.org/abs/1808.03357 (2018).
 
-This page is a concise tutorial for learning in a forward pass. By the end of the tutorial, you will understand the concept, and know how to apply this form of learning in your work. The tutorial provides explanations for beginners, and detailed steps for experts. Use the table of contents to go where you want. If you have a work on forward learning, [add your work](#add-your-work) to this page.
+This page is a concise tutorial for learning in a forward pass. By the end of the tutorial, you will understand the concept, and know how to apply this form of learning in your work. The tutorial provides explanations for beginners, and detailed steps for experts. Use the table of contents to go where you want. If you have a work on forward learning, [add your work](#4i-add-your-work) to this page.
 
 (Link to article)
 
@@ -23,9 +23,9 @@ Table of Contents
   3.3. [Overview of Complete Procedure](#33-overview-of-complete-procedure)\
   3.4. [Spiking Networks](#34-spiking-networks)
 4. [Works on Forward Learning](#4-works-on-forward-learning)\
+  4.i. [Add Your Work](#4i-add-your-work)
   4.1. [Error Forward Propagation (2018)](#41-error-forward-propagation-2018)\
   4.2. [Forward Forward (2022)](#42-forward-forward-2022)\
-  4.i. [Add Your Work](#4i-add-your-work)
 5. [Reading Material](#5-reading-material)
 6. [Appendix: Reading on Credit Assignment](#6-appendix-reading-on-credit-assignment)\
   6.1. [Spatial Credit Assignment](#61-spatial-credit-assignment)\
@@ -214,6 +214,11 @@ The other images on the right show the two solutions Signal Propagation (SP) pro
 
 ## 4. Works on Forward Learning
 
+A list of works on forward learning, using the forward pass for learning. Works are ordered by date.
+
+### 4.i. Add your work
+Contact me or [submit a pull request](https://github.com/amassivek/amassivek.github.io) to add a paragraph and slide on your work. The content is at your discretion. I may provide minor edits (e.g. grammar and positioning).
+
 ### 4.1. Error Forward Propagation (2018)
 
 Error Forward-Propagation: Reusing Feedforward Connections to Propagate Errors in Deep Learning\
@@ -230,20 +235,20 @@ The forward forward algorithm is an implementation of the signal propagation fra
 Forward Forward Algorithm\
 https://www.cs.toronto.edu/~hinton/FFA13.pdf
 
-### 4.i. Add your work
-Contact me or [submit a pull request](https://github.com/amassivek/amassivek.github.io) to add a paragraph and slide on your work. The content is at your discretion. I may provide minor edits (e.g. grammar and positioning).
-
 
 ## 5. Reading Material
 
-Signal Propagation: A Framework for Learning and Inference In a Forward Pass\
-https://arxiv.org/abs/2204.01723 (2022)
+Works are ordered by date.
+
+Error Forward-Propagation: Reusing Feedforward Connections to Propagate Errors in Deep Learning\
+https://arxiv.org/abs/1808.03357 (2018)
 
 Forward Forward Algorithm\
 https://www.cs.toronto.edu/~hinton/FFA13.pdf (2022)
 
-Error Forward-Propagation: Reusing Feedforward Connections to Propagate Errors in Deep Learning\
-https://arxiv.org/abs/1808.03357 (2018)
+Signal Propagation: A Framework for Learning and Inference In a Forward Pass\
+https://arxiv.org/abs/2204.01723 (2022)
+
 
 ### 5.1 Other Material
 
