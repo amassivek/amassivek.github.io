@@ -23,7 +23,8 @@ Table of Contents
   3.3. [Overview of Complete Procedure](#33-overview-of-complete-procedure)\
   3.4. [Spiking Networks](#34-spiking-networks)
 4. [Works on Forward Learning](#4-works-on-forward-learning)\
-  4.1. [Forward Forward](#41-forward-forward)\
+  4.1. [Error Forward Propagation (2018)](#41-error-forward-propagation-2018)\
+  4.2. [Forward Forward (2022)](#42-forward-forward-2022)\
   4.i. [Add Your Work](#4i-add-your-work)
 5. [Reading Material](#5-reading-material)
 6. [Appendix: Reading on Credit Assignment](#6-appendix-reading-on-credit-assignment)\
@@ -213,7 +214,12 @@ The other images on the right show the two solutions Signal Propagation (SP) pro
 
 ## 4. Works on Forward Learning
 
-### 4.1. Forward Forward
+### 4.1. Error Forward Propagation (2018)
+
+Error Forward-Propagation: Reusing Feedforward Connections to Propagate Errors in Deep Learning\
+https://arxiv.org/abs/1808.03357
+
+### 4.2. Forward Forward (2022)
 
 The forward forward algorithm is an implementation of the signal propagation framework for learning and inference in a forward pass (figure below). Under signal propagation, S is the transform of the context c, which for supervised learning is the target. In forward forward, S is a concatenation of the target c with the input x, as shown in the figure below.
 
