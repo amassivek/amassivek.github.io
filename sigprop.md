@@ -179,14 +179,17 @@ The third option: the classical and intuitive choice is to train a prediction ou
 <picture>
  <img alt="temporal-credit-assignment" src="./sigprop/Slide29.PNG">
 </picture>	
+<picture>
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide30.PNG">
+</picture>	
 
 ### 3.3. Overview of Complete Procedure
 
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide30.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide31.PNG">
 </picture>	
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide31.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide32.PNG">
 </picture>	
 
 
@@ -201,14 +204,14 @@ The most popular approach to resolve this problem uses a surrogate function to r
 Signal Propagation provides two solutions that are compatible with models of learning in the brain and in hardware.
 
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide32.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide33.PNG">
 </picture>	
 
 Below is a visualization of the learning signal (colored in red) going through a spiking neuron (shown as S), past the voltage or membrane potential (U), to update the weights (W). Backpropagation, with the dead neuron problem, is on the left. Backpropagation, with a surrogate function (f), is second from the left. The learning signal for backpropagation is global (L_G) and comes from the last layer of the network; the dotted boxes are upper neurons/layers.
 
 The other images on the right show the two solutions Signal Propagation (SP) provides. First, SP can use a surrogate as well, but the learning signal does not go through the spiking equation (S). Instead, the learning signal is before the spiking equation (S), directly attached to the surrogate function (f). As a result, SP is more compatible with learning in the brain, such as in a multi compartment model of a biological neuron. Second, SP can learn using only the voltage or membrane potential (U). In this case, the learning signal is directly attached to U. This requires no surrogate or change to the neuron. Thereby, SP provides compatibility with learning in hardware.
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide33.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide34.PNG">
 </picture>	
 
 
@@ -221,6 +224,12 @@ Contact me or [submit a pull request](https://github.com/amassivek/amassivek.git
 
 ### 4.1. Error Forward Propagation (2018)
 
+The error forward propagation algorithm is an implementation of the signal propagation framework for learning and inference in a forward pass (figure below). Under signal propagation, S is the transform of the context c, which for supervised learning is the target. In error forward propagation, S is the projection of the error from the output to the front of the network, as shown in the figure below.
+
+<picture>
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide39.PNG">
+</picture>	
+
 Error Forward-Propagation: Reusing Feedforward Connections to Propagate Errors in Deep Learning\
 https://arxiv.org/abs/1808.03357
 
@@ -229,7 +238,7 @@ https://arxiv.org/abs/1808.03357
 The forward forward algorithm is an implementation of the signal propagation framework for learning and inference in a forward pass (figure below). Under signal propagation, S is the transform of the context c, which for supervised learning is the target. In forward forward, S is a concatenation of the target c with the input x, as shown in the figure below.
 
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide38.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide39.PNG">
 </picture>	
 
 Forward Forward Algorithm\
