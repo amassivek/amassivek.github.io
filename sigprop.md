@@ -3,11 +3,11 @@ title: "The Framework for Learning and Inference in a Forward Pass - Signal Prop
 permalink: /sigprop
 ---
 
+This page is an introduction to and concise tutorial for learning in a forward pass. By the end of the tutorial, you will understand the concept, and know how to apply this form of learning in your work. The tutorial provides explanations for beginners, and detailed steps for experts. Use the table of contents to go where you want. If you have a work on forward learning, [add your work](#4i-add-your-work) to this page.
+
 In this post, I present the framework for inference and learning in a forward pass, called the Signal Propagation framework. This is a framework for using only forward passes to learn any kind of data and on any kind of network. I demonstrate it works well for discrete networks, continuous networks, and spiking networks, all without modification to the network architecture. In other words, the version of network used for inference is the same as the version used for learning. In contrast, backpropagation and previous works have additional structure and algorithm elements for the training version of the network than for the inference version of the network, which are referred to as learning constraints.
 
 Signal Propagation is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation. It also has better efficiency and compatibility than backpropagation. This framework is introduced in https://arxiv.org/abs/2204.01723 (2022) by Adam Kohan, Ed Rietman, and Hava Siegelmann. Hava Siegelmann and Ed Rietman are my advisors. The origin of forward learning is in our work https://arxiv.org/abs/1808.03357 (2018).
-
-This page is a concise tutorial for learning in a forward pass. By the end of the tutorial, you will understand the concept, and know how to apply this form of learning in your work. The tutorial provides explanations for beginners, and detailed steps for experts. Use the table of contents to go where you want. If you have a work on forward learning, [add your work](#4i-add-your-work) to this page.
 
 (Link to article)
 
