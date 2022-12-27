@@ -227,7 +227,7 @@ Contact me or [submit a pull request](https://github.com/amassivek/amassivek.git
 The error forward propagation algorithm is an implementation of the signal propagation framework for learning and inference in a forward pass (figure below). Under signal propagation, S is the transform of the context c, which for supervised learning is the target. In error forward propagation, S is the projection of the error from the output to the front of the network, as shown in the figure below.
 
 <picture>
- <img alt="temporal-credit-assignment" src="./sigprop/Slide39.PNG">
+ <img alt="temporal-credit-assignment" src="./sigprop/Slide40.PNG">
 </picture>	
 
 Error Forward-Propagation: Reusing Feedforward Connections to Propagate Errors in Deep Learning\
