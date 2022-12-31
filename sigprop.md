@@ -7,7 +7,7 @@ This page is an introduction to and concise tutorial for learning in a forward p
 
 In this post, I present the framework for inference and learning in a forward pass, called the Signal Propagation framework. This is a framework for using only forward passes to learn any kind of data and on any kind of network. I demonstrate it works well for discrete networks, continuous networks, and spiking networks, all without modification to the network architecture. In other words, the version of network used for inference is the same as the version used for learning. In contrast, backpropagation and previous works have additional structure and algorithm elements for the training version of the network than for the inference version of the network, which are referred to as learning constraints.
 
-Signal Propagation is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation. It also has better efficiency and compatibility than backpropagation. This framework is introduced in https://arxiv.org/abs/2204.01723 (2022) by Adam Kohan, Ed Rietman, and Hava Siegelmann. Hava Siegelmann and Ed Rietman are my advisors. The origin of forward learning is in our work https://arxiv.org/abs/1808.03357 (2018).
+Signal Propagation is a least constrained method for learning, and yet has better performance, efficiency, and compatibility than previous alternatives to backpropagation. It also has better efficiency and compatibility than backpropagation. This framework is introduced in https://arxiv.org/abs/2204.01723 (2022) by Adam Kohan, Ed Rietman, and Hava Siegelmann. Hava Siegelmann and Ed Rietman are my advisors. The origin of forward learning is in our work https://arxiv.org/abs/1808.03357 (2018). The library is available at https://github.com/amassivek/signalpropagation .
 
 (Link to article)
 
@@ -267,6 +267,8 @@ https://arxiv.org/abs/2204.01723 (2022)
 A well written guide on spatial and temporal credit assignment. I used it to help write this post.\
 Training Spiking Neural Networks using lessons from deep learning\
 https://arxiv.org/abs/2109.12894
+
+The library is available at https://github.com/amassivek/signalpropagation .
 
 
 With Thanks to: Alexandra Marmarinos for her editing work and guidance. (Add additional editors).
