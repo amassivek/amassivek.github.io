@@ -1,5 +1,6 @@
 ---
 title: "About Me"
+nav_order: 2
 ---
 
 # Adam Kohan

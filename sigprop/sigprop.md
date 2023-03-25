@@ -2,6 +2,7 @@
 title: "Forward Learning Framework"
 permalink: /sigprop
 has_children: true
+nav_order: 3
 ---
 
 # The Framework for Learning and Inference in a Forward Pass
