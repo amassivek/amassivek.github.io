@@ -52,12 +52,12 @@ Predictive Forward-Forward Algorithm\
 <tr>
 <td>
 <picture>
- <img alt="forward-forward-rep" src="./sigprop/1_pff_ngc_rep.png" width="80%" height="80%">
+ <img alt="forward-forward-rep" src="./sigprop/1_pff_ngc_rep.png" width="70%" height="70%">
 </picture>	
 </td>
 <td>
 <picture>
- <img alt="forward-forward-gen" src="./sigprop/2_pff_ngc_gen.png" width="80%" height="80%">
+ <img alt="forward-forward-gen" src="./sigprop/2_pff_ngc_gen.png" width="70%" height="70%">
 </picture>	
 </td>
 </tr>
