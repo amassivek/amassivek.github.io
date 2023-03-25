@@ -39,7 +39,7 @@ The forward forward algorithm is an implementation of the signal propagation fra
 Forward Forward Algorithm\
 https://www.cs.toronto.edu/~hinton/FFA13.pdf
 
-### 4.2. Predictive Forward Forward (2022)
+### 4.3. Predictive Forward Forward (2022)
 
 The predictive forward-forward (PFF) algorithm is a generalization of the forward-forward (FF) learning rule and predictive coding, focusing on adaptation in a recurrent neural system that combines local top-down, lateral, and bottom-up information when iteratively processing sensory patterns. PFF specifically centers around the idea that two neural circuits can jointly learn from one another, i.e., a representation circuit that focuses on rapidly acquiring representations (by contrasting positive and negative samples, as in FF) and a noisy generative circuit that focuses on synthesizing these representations (each layer of this circuit tries to locally predict the activities of the representation circuit). The top-most layer of the generative circuit contains a multimodal prior over neural activities which can then be readily sampled from in order to "fantasize" data points (based on its memories) on-the-fly. PFF notably further introduces a simple spatially and temporally local scheme for adapting cross-inhibitory and self-excitation synapses within a layer of neurons.
 
