@@ -1,7 +1,9 @@
 ---
-title: "The Framework for Learning and Inference in a Forward Pass - Signal Propagation"
+title: "Signal Propagation"
 permalink: /sigprop
 ---
+
+# The Framework for Learning and Inference in a Forward Pass
 
 This page is an introduction to and concise tutorial for learning in a forward pass. By the end of the tutorial, you will understand the concept, and know how to apply this form of learning in your work. The tutorial provides explanations for beginners, and detailed steps for experts. Use the table of contents to go where you want. If you have a work on forward learning, [add your work](#4i-add-your-work) to this page.
 
