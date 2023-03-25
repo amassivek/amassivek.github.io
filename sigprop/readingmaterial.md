@@ -12,13 +12,16 @@ Table of Contents
 Works are ordered by date.
 
 Error Forward-Propagation: Reusing Feedforward Connections to Propagate Errors in Deep Learning\
-https://arxiv.org/abs/1808.03357 (2018)
-
-Forward Forward Algorithm\
-https://www.cs.toronto.edu/~hinton/FFA13.pdf (2022)
+[arxiv preprint](https://arxiv.org/abs/1808.03357) (2018)
 
 Signal Propagation: A Framework for Learning and Inference In a Forward Pass\
-https://arxiv.org/abs/2204.01723 (2022)
+[arxiv preprint](https://arxiv.org/abs/2204.01723) (2022)
+
+Forward Forward Algorithm\
+[preprint](https://www.cs.toronto.edu/~hinton/FFA13.pdf) (2022)
+
+Predictive Forward-Forward Algorithm\
+[arxiv preprint](https://arxiv.org/abs/2301.01452) 2022
 
 
 ### 5.1 Other Material
