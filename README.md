@@ -1,3 +1,7 @@
+---
+title: "Home"
+---
+
 # Adam Kohan
 Research\
 Biologically Inspired Neural and Dynamical Systems\
