@@ -9,7 +9,7 @@ Table of Contents
   4.i. [Add Your Work](#4i-add-your-work)\
   4.1. [Error Forward Propagation (2018)](#41-error-forward-propagation-2018)\
   4.2. [Forward Forward (2022)](#42-forward-forward-2022)\
-  4.3. [Predictive Forward Forward (2022)](#42-predictive-forward-forward-2022)
+  4.3. [Predictive Forward Forward (2022)](#43-predictive-forward-forward-2022)
 
 ## 4. Works on Forward Learning
 

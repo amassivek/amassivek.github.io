@@ -29,7 +29,7 @@ Table of Contents
   4.i. [Add Your Work](worksonforwardlearning.md#4i-add-your-work)\
   4.1. [Error Forward Propagation (2018)](worksonforwardlearning.md#41-error-forward-propagation-2018)\
   4.2. [Forward Forward (2022)](worksonforwardlearning.md#42-forward-forward-2022)\
-  4.3. [Predictive Forward Forward (2022)](worksonforwardlearning.md#42-predictive-forward-forward-2022)
+  4.3. [Predictive Forward Forward (2022)](worksonforwardlearning.md#43-predictive-forward-forward-2022)
 5. [Reading Material](readingmaterial.md#5-reading-material)
 6. [Appendix: Reading on Credit Assignment](creditassignment.md#6-appendix-reading-on-credit-assignment)\
   6.1. [Spatial Credit Assignment](creditassignment.md#61-spatial-credit-assignment)\
