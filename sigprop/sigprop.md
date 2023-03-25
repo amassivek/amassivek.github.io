@@ -15,21 +15,21 @@ Signal Propagation is a least constrained method for learning, and yet has bette
 (Link to article)
 
 Table of Contents
-1. [Introduction](#1-introduction)\
-  1.1. [Previous Approaches to Learning](#11-previous-approaches-to-learning)\
-  1.2. [A New Framework for Learning](#12-a-new-framework-for-learning)\
-  1.3. [The Problem with Learning Constraints](#13-the-problem-with-learning-constraints)
-2. [The Two Elements of Learning](#2-the-two-elements-of-learning)
-3. [Learning in a Forward Pass](#3-learning-in-a-forward-pass)\
-  3.1. [The Approach to Learn](#31-the-approach-to-learn)\
-  3.2. [The Steps to Learn](#32-the-steps-to-learn)\
-  3.3. [Overview of Complete Procedure](#33-overview-of-complete-procedure)\
-  3.4. [Spiking Networks](#34-spiking-networks)
-4. [Works on Forward Learning](#4-works-on-forward-learning)\
-  4.i. [Add Your Work](#4i-add-your-work)\
-  4.1. [Error Forward Propagation (2018)](#41-error-forward-propagation-2018)\
-  4.2. [Forward Forward (2022)](#42-forward-forward-2022)
-5. [Reading Material](#5-reading-material)
-6. [Appendix: Reading on Credit Assignment](#6-appendix-reading-on-credit-assignment)\
-  6.1. [Spatial Credit Assignment](#61-spatial-credit-assignment)\
-  6.2. [Temporal Credit Assignment](#62-temporal-credit-assignment)
+1. [Introduction](/introduction#1-introduction)?\
+  1.1. [Previous Approaches to Learning](/introduction#11-previous-approaches-to-learning)?\
+  1.2. [A New Framework for Learning](/introduction#12-a-new-framework-for-learning)?\
+  1.3. [The Problem with Learning Constraints](/introduction#13-the-problem-with-learning-constraints)?
+2. [The Two Elements of Learning](/elementsoflearning#2-the-two-elements-of-learning)?
+3. [Learning in a Forward Pass](/learninginaforwardpass#3-learning-in-a-forward-pass)?\
+  3.1. [The Approach to Learn](/learninginaforwardpass#31-the-approach-to-learn)?\
+  3.2. [The Steps to Learn](/learninginaforwardpass#32-the-steps-to-learn)?\
+  3.3. [Overview of Complete Procedure](/learninginaforwardpass#33-overview-of-complete-procedure)?\
+  3.4. [Spiking Networks](/learninginaforwardpass#34-spiking-networks)?
+4. [Works on Forward Learning](/worksonforwardlearning#4-works-on-forward-learning)?\
+  4.i. [Add Your Work](/worksonforwardlearning#4i-add-your-work)?\
+  4.1. [Error Forward Propagation (2018)](/worksonforwardlearning#41-error-forward-propagation-2018)?\
+  4.2. [Forward Forward (2022)](/worksonforwardlearning#42-forward-forward-2022)?
+5. [Reading Material](/readingmaterial#5-reading-material)?
+6. [Appendix: Reading on Credit Assignment](/creditassignment#6-appendix-reading-on-credit-assignment)?\
+  6.1. [Spatial Credit Assignment](/creditassignment#61-spatial-credit-assignment)?\
+  6.2. [Temporal Credit Assignment](/creditassignment#62-temporal-credit-assignment)?
