@@ -1,5 +1,5 @@
 ---
-title: "Signal Propagation"
+title: "Forward Learning (SigProp)"
 permalink: /sigprop
 has_children: true
 ---
