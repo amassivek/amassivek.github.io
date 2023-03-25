@@ -1,6 +1,6 @@
 ---
 title: "Learning in a Forward Pass"
-parent: "Signal Propagation"
+parent: "Forward Learning Framework"
 nav_order: 3
 ---
 

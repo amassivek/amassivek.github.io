@@ -1,6 +1,6 @@
 ---
 title: "Works on Forward Learning"
-parent: "Signal Propagation"
+parent: "Forward Learning Framework"
 nav_order: 4
 ---
 

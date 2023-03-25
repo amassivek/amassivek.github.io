@@ -1,5 +1,5 @@
 ---
-title: "Forward Learning - SigProp"
+title: "Forward Learning Framework"
 permalink: /sigprop
 has_children: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: "The Two Elements of Learning"
-parent: "Signal Propagation"
+parent: "Forward Learning Framework"
 nav_order: 2
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Introduction
-parent: "Signal Propagation"
+parent: "Forward Learning Framework"
 nav_order: 1
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Appendix: Reading on Credit Assignment"
-parent: "Signal Propagation"
+parent: "Forward Learning Framework"
 nav_order: 6
 ---
 
