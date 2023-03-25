@@ -26,7 +26,7 @@ The error forward propagation algorithm is an implementation of the signal propa
 </picture>	
 
 Error Forward-Propagation: Reusing Feedforward Connections to Propagate Errors in Deep Learning\
-[](https://arxiv.org/abs/1808.03357)
+[arxiv](https://arxiv.org/abs/1808.03357)
 
 ### 4.2. Forward Forward (2022)
 
@@ -51,12 +51,12 @@ Predictive Forward-Forward Algorithm\
 <tr>
 <td>
 <picture>
- <img alt="forward-forward-rep" src="./sigprop/1_pff_ngc_rep.png">
+ <img alt="forward-forward-rep" src="./sigprop/1_pff_ngc_rep.png" width="80%" height="80%">
 </picture>	
 </td>
 <td>
 <picture>
- <img alt="forward-forward-gen" src="./sigprop/2_pff_ngc_gen.png">
+ <img alt="forward-forward-gen" src="./sigprop/2_pff_ngc_gen.png" width="80%" height="80%">
 </picture>	
 </td>
 </tr>
