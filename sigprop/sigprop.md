@@ -26,11 +26,11 @@ Table of Contents
   3.2. [The Steps to Learn](learninginaforwardpass.md#32-the-steps-to-learn)\
   3.3. [Overview of Complete Procedure](learninginaforwardpass.md#33-overview-of-complete-procedure)\
   3.4. [Spiking Networks](learninginaforwardpass.md#34-spiking-networks)
-4. [Works on Forward Learning](worksonforwardlearning.md#4-works-on-forward-learning)\
-  4.i. [Add Your Work](worksonforwardlearning.md#4i-add-your-work)\
-  4.1. [Error Forward Propagation (2018)](worksonforwardlearning.md#41-error-forward-propagation-2018)\
-  4.2. [Forward Forward (2022)](worksonforwardlearning.md#42-forward-forward-2022)\
-  4.3. [Predictive Forward Forward (2022)](worksonforwardlearning.md#43-predictive-forward-forward-2022)
+4. [Works on Forward Learning](works.md#4-works-on-forward-learning)\
+  4.i. [Add Your Work](works.md#4i-add-your-work)\
+  4.1. [Error Forward Propagation (2018)](works.md#41-error-forward-propagation-2018)\
+  4.2. [Forward Forward (2022)](works.md#42-forward-forward-2022)\
+  4.3. [Predictive Forward Forward (2022)](works.md#43-predictive-forward-forward-2022)
 5. [Reading Material](readingmaterial.md#5-reading-material)
 6. [Appendix: Reading on Credit Assignment](creditassignment.md#6-appendix-reading-on-credit-assignment)\
   6.1. [Spatial Credit Assignment](creditassignment.md#61-spatial-credit-assignment)\
